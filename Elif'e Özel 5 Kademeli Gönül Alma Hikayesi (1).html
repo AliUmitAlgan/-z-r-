@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Elif'e Özel 5 Kademeli Gönül Alma Hikayesi ✨</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100dvh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3B1228;
+            transition: background 1.5s ease-in-out;
+            /* Bölüm 1 Varsayılan: Warm Twilight */
+            background: linear-gradient(135deg, #FDE2E4 0%, #E2ECE9 45%, #DFE7FD 100%);
+        }
+
+        /* 5 Bölüme Özel Arka Plan Temaları */
+        body.stage-1 {
+            /* Warm Twilight */
+            background: linear-gradient(135deg, #FDE2E4 0%, #FAD2E1 45%, #E2ECE9 100%);
+        }
+        body.stage-2 {
+            /* Soft Rose */
+            background: linear-gradient(135deg, #FFE4E6 0%, #FECDD3 52%, #FBCFE8 100%);
+        }
+        body.stage-3 {
+            /* Warm Amber & Lavender */
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 45%, #EDE9FE 100%);
+        }
+        body.stage-4 {
+            /* Deep Romantic Plum */
+            background: linear-gradient(135deg, #4A154B 0%, #701A75 50%, #9D174D 100%);
+        }
+        body.stage-5 {
+            /* Royal Midnight & Gold */
+            background: linear-gradient(135deg, #1E1B4B 0%, #312E81 55%, #78350F 100%);
+        }
+
+        .font-serif-romantic {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        /* Yüksek Kontrastlı Glassmorphism Kart */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1.5px solid rgba(255, 255, 255, 0.95);
+            box-shadow: 0 20px 50px rgba(30, 15, 35, 0.18);
+        }
+
+        /* Arka Plan Yüzen Kalpler */
+        .ambient-heart {
+            position: fixed;
+            bottom: -40px;
+            pointer-events: none;
+            opacity: 0.28;
+            z-index: 0;
+            animation: floatAmbient linear infinite;
+        }
+
+        @keyframes floatAmbient {
+            0% { transform: translateY(0) scale(0.85) rotate(0deg); opacity: 0; }
+            15% { opacity: 0.35; }
+            85% { opacity: 0.35; }
+            100% { transform: translateY(-110vh) scale(1.2) rotate(25deg); opacity: 0; }
+        }
+
+        /* Kart Giriş & Yeni Mesaj Vurgu Animasyonları */
+        @keyframes cardPop {
+            0% { opacity: 0; transform: translateY(7px) scale(0.96); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes storyPulseHighlight {
+            0% {
+                box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.5);
+                background-color: #FFF1F2;
+                border-color: #FB7185;
+            }
+            50% {
+                box-shadow: 0 0 0 10px rgba(225, 29, 72, 0);
+                background-color: #FFE4E6;
+                border-color: #E11D48;
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(225, 29, 72, 0);
+                background-color: #FFF1F2;
+                border-color: #FECDD3;
+            }
+        }
+
+        .animate-pop {
+            animation: cardPop 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        .story-pulse {
+            animation: storyPulseHighlight 0.95s ease-out;
+        }
+
+        /* İlerleme Çubuğu Parıltısı */
+        .progress-shimmer {
+            background: linear-gradient(90deg, #FB7185, #F59E0B, #E11D48);
+            background-size: 200% 100%;
+            animation: shimmerFlow 2.6s linear infinite;
+        }
+
+        @keyframes shimmerFlow {
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
+        }
+
+        /* Tam Ekran Oyun Tuvali */
+        #gameCanvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+            cursor: grab;
+        }
+
+        #gameCanvas:active {
+            cursor: grabbing;
+        }
+
+        /* Özel Kaydırma Çubuğu */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: #FDA4AF; border-radius: 999px; }
+    </style>
+</head>
+<body class="stage-1">
+
+    <!-- Arka Plan Yüzen Süslemeler -->
+    <div id="ambientBg" class="fixed inset-0 pointer-events-none overflow-hidden z-0"></div>
+
+    <!-- Üst Kontrol Çubuğu -->
+    <header class="fixed top-3 left-3 right-3 max-w-lg mx-auto flex items-center justify-between z-50 pointer-events-none">
+        <div class="pointer-events-auto">
+            <button id="soundToggleBtn"
+                    title="Sesi Aç / Kapat"
+                    class="w-9 h-9 rounded-full bg-white/95 hover:bg-white text-rose-600 border border-rose-200 shadow-md flex items-center justify-center text-base transition hover:scale-105 active:scale-95 cursor-pointer">
+                🔊
+            </button>
+        </div>
+
+        <div class="flex items-center gap-2 pointer-events-auto">
+            <button id="readNotesBtn"
+                    class="hidden bg-white/95 hover:bg-white text-rose-700 border border-rose-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-md flex items-center gap-1.5 transition hover:scale-105 active:scale-95 cursor-pointer">
+                <span>📜</span>
+                <span>Okunan Notlar (<span id="notesBadgeCount">0</span>)</span>
+            </button>
+
+            <button id="customizeBtn"
+                    class="bg-white/95 hover:bg-white text-rose-700 border border-rose-200 px-3 py-1.5 rounded-full text-xs font-bold shadow-md flex items-center gap-1.5 transition hover:scale-105 active:scale-95 cursor-pointer">
+                <span>✏️</span>
+                <span>Özelleştir</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ANA UYGULAMA KONTEYNERİ -->
+    <main class="relative z-10 w-full max-w-lg h-full flex flex-col items-center justify-center p-4">
+
+        <!-- 1. GİRİŞ EKRANI -->
+        <section id="startScreen" class="glass-card rounded-3xl p-6 sm:p-7 w-full max-h-[88dvh] overflow-y-auto text-center animate-pop">
+            <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-rose-100 to-rose-200 flex items-center justify-center text-3xl shadow-inner animate-bounce">
+                💌
+            </div>
+
+            <h1 id="introHeading" class="font-serif-romantic text-2xl sm:text-3xl font-bold text-rose-600 mb-2 leading-snug">
+                Elif, Sana 5 Kademeli Bir Hikayem Var ✨
+            </h1>
+
+            <p id="introSubtitle" class="text-sm text-rose-950/85 font-medium leading-relaxed mb-4">
+                Hayatım, seni üzdüğüm için gerçekten çok pişmanım... Kalbimden geçen 35 cümleyi 5 bölümlük çok sakin ve yavaş bir yolculuğa sakladım. Süzülen sevgi tanelerini topladıkça her cümleyi acele etmeden rahatça okuyabilir, her bölüm sonunda yeni sayfaya birlikte geçebiliriz. ❤️
+            </p>
+
+            <!-- 5 Bölümlük Yolculuk Haritası -->
+            <div class="bg-rose-50/90 border border-rose-200/80 rounded-2xl p-3 mb-4 text-left space-y-1.5">
+                <p class="text-[11px] font-bold uppercase tracking-wider text-rose-500 text-center mb-1.5">
+                    5 Bölümlük Gönül Alma Yolculuğu
+                </p>
+                <div class="flex items-center justify-between bg-white/95 px-3 py-1.5 rounded-xl text-xs font-bold text-rose-950">
+                    <span>1. Bölüm: Pişmanlık & Farkındalık</span>
+                    <span>💔 🩹 💧 🤍</span>
+                </div>
+                <div class="flex items-center justify-between bg-white/95 px-3 py-1.5 rounded-xl text-xs font-bold text-rose-950">
+                    <span>2. Bölüm: Sen Benim Her Şeyimsin, Elif</span>
+                    <span>❤️ ✨ 🌹 💖</span>
+                </div>
+                <div class="flex items-center justify-between bg-white/95 px-3 py-1.5 rounded-xl text-xs font-bold text-rose-950">
+                    <span>3. Bölüm: Birlikte Güzel Anılarımız</span>
+                    <span>☕ 🍫 📸 🎶</span>
+                </div>
+                <div class="flex items-center justify-between bg-white/95 px-3 py-1.5 rounded-xl text-xs font-bold text-rose-950">
+                    <span>4. Bölüm: Sana Sözlerim & Telafi</span>
+                    <span>💍 💌 🎁 ♾️</span>
+                </div>
+                <div class="flex items-center justify-between bg-white/95 px-3 py-1.5 rounded-xl text-xs font-bold text-rose-950">
+                    <span>5. Bölüm: Büyük Final: Kalbimin Kapısı</span>
+                    <span>👑 🗝️ ❤️‍🔥 🌟</span>
+                </div>
+            </div>
+
+            <p class="text-xs font-semibold text-rose-800 mb-4">
+                Sepeti parmağınla kaydır (veya fare / sağ-sol yön tuşlarını kullan) ✨
+            </p>
+
+            <button id="startBtn"
+                    class="w-full py-3.5 px-6 rounded-2xl font-bold text-base text-white bg-gradient-to-r from-rose-500 via-rose-600 to-pink-600 shadow-lg shadow-rose-500/35 hover:brightness-105 active:scale-95 transition cursor-pointer">
+                1. Bölüme Başla, Elif 💖
+            </button>
+        </section>
+
+        <!-- 2. OYUN EKRANI -->
+        <section id="gameScreen" class="hidden fixed inset-0 w-screen h-[100dvh] flex flex-col z-20">
+            <!-- Üst HUD & Geniş Okuma Kartı -->
+            <div class="w-full max-w-lg mx-auto pt-14 px-3.5 z-30 pointer-events-none">
+                <div class="glass-card rounded-3xl p-4 shadow-xl">
+                    <!-- Bölüm Başlığı & Sayaç -->
+                    <div class="flex items-center justify-between gap-2 mb-2">
+                        <span id="hudStageBadge" class="bg-gradient-to-r from-rose-600 to-pink-600 text-white text-[11px] font-bold px-3 py-1 rounded-full truncate">
+                            Bölüm 1/5: Pişmanlık & Farkındalık
+                        </span>
+                        <span id="hudProgressBadge" class="bg-rose-100 text-rose-800 text-[11px] font-bold px-2.5 py-1 rounded-full shrink-0">
+                            0 / 35 (%0)
+                        </span>
+                    </div>
+
+                    <!-- İlerleme Çubuğu -->
+                    <div class="w-full h-2.5 bg-rose-100 rounded-full overflow-hidden mb-3">
+                        <div id="hudProgressFill" class="h-full progress-shimmer rounded-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+
+                    <!-- Yüksek Kontrastlı Büyük Hikaye Okuma Kartı -->
+                    <div id="storyCardBox" class="bg-rose-50/95 border-2 border-rose-200 rounded-2xl p-3.5 sm:p-4 min-h-[100px] flex flex-col items-center justify-center text-center transition-colors">
+                        <span id="storyStepLabel" class="text-[11px] font-extrabold uppercase tracking-widest text-rose-600 mb-1.5">
+                            İlk sevgi tanesini yakala, hayatım ✨
+                        </span>
+                        <p id="storyLiveText" class="text-base sm:text-lg font-bold text-rose-950 leading-relaxed">
+                            Yavaşça süzülen ilk simgeyi yakaladığında ilk cümlem açılacak, Elif... 💌
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Trip Bulutu Esprili Baloncuğu -->
+                <div id="tripToastArea" class="mt-2 min-h-[32px] flex items-center justify-center"></div>
+            </div>
+
+            <!-- Tam Ekran Oyun Tuvali -->
+            <div class="relative flex-1 w-full h-full overflow-hidden">
+                <canvas id="gameCanvas"></canvas>
+            </div>
+        </section>
+
+        <!-- BÖLÜM GEÇİŞ DURAKLATMA VE KUTLAMA MODALI -->
+        <div id="stageBannerOverlay" class="hidden fixed inset-0 bg-slate-950/65 backdrop-blur-sm flex items-center justify-center p-5 z-40">
+            <div class="glass-card rounded-3xl p-6 sm:p-7 max-w-sm w-full text-center border-2 border-amber-300 shadow-2xl animate-pop">
+                <div class="inline-block bg-gradient-to-r from-amber-400 to-rose-500 text-white text-[11px] font-extrabold uppercase tracking-widest px-3.5 py-1 rounded-full shadow-sm mb-3">
+                    🎉 YENİ BÖLÜME GEÇTİN! 🎉
+                </div>
+
+                <!-- Tamamlanan Bölüm Özeti -->
+                <p id="completedStageSummary" class="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-xl py-1.5 px-3 mb-3">
+                    ✓ 1. Bölüm Tamamlandı!
+                </p>
+
+                <div id="bannerEmoji" class="text-4xl sm:text-5xl mb-2.5">❤️ ✨ 🌹 💖</div>
+                <p id="bannerSub" class="text-xs font-bold uppercase tracking-wider text-rose-500 mb-1">
+                    Bölüm 2 / 5
+                </p>
+                <h2 id="bannerTitle" class="font-serif-romantic text-2xl sm:text-3xl font-bold text-rose-700 mb-2 leading-snug">
+                    2. Bölüm: Sen Benim Her Şeyimsin, Elif
+                </h2>
+                <p id="bannerDesc" class="text-sm font-medium text-rose-950/85 leading-relaxed mb-5">
+                    Kalbimdeki yerinin ne kadar eşsiz olduğunu anlatan yeni cümleler şimdi senin için açılıyor, hayatım...
+                </p>
+
+                <button id="continueStageBtn"
+                        class="w-full py-3.5 px-6 rounded-2xl font-bold text-base text-white bg-gradient-to-r from-rose-500 via-rose-600 to-amber-500 shadow-lg shadow-rose-500/30 hover:brightness-105 active:scale-95 transition cursor-pointer">
+                    Devam Et ➡️
+                </button>
+            </div>
+        </div>
+
+        <!-- 3. BÜYÜK FİNAL MODALI -->
+        <section id="winScreen" class="hidden glass-card rounded-3xl p-5 sm:p-6 w-full max-h-[88dvh] overflow-y-auto text-center mt-8 animate-pop">
+            <!-- Aşama 1: Final Özür Mektubu & "Barıştık mı Elif?" -->
+            <div id="finaleLetterPhase">
+                <div class="text-4xl mb-1.5">👑🗝️💖</div>
+                <h2 id="winHeading" class="font-serif-romantic text-2xl sm:text-3xl font-bold text-rose-600 mb-1">
+                    35 Cümlenin Tamamını Topladın, Elif!
+                </h2>
+                <p class="text-[11px] font-bold uppercase tracking-wider text-rose-800/75 mb-3">
+                    Ve Kalbimin En Derinindeki Asıl Mektup ✨
+                </p>
+
+                <div class="relative bg-white border border-rose-200 rounded-2xl p-4 pt-5 text-left mb-4 shadow-sm">
+                    <span id="letterGreetingBadge" class="absolute -top-2.5 left-3.5 bg-rose-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">
+                        Canım Elif'im 💌
+                    </span>
+                    <p id="finalLetterDisplay" class="text-sm text-rose-950 font-medium leading-relaxed whitespace-pre-line">
+                        Canım Elif'im, seni kırdığım ve üzdüğüm için gerçekten çok özür dilerim. Senin yüzündeki tek bir gülümseme benim için dünyalara bedel. Hatalarımı telafi etmek ve seni hep mutlu etmek istiyorum. İyi ki hayatımdasın hayatım, seni her şeyden çok seviyorum! ❤️
+                    </p>
+                    <p id="finalSignatureDisplay" class="font-serif-romantic italic text-right text-base font-bold text-rose-600 mt-2.5">
+                        - Seni çok seven Ali
+                    </p>
+                </div>
+
+                <div class="bg-rose-50/90 border border-rose-200 rounded-2xl p-4">
+                    <h3 id="forgiveQuestionTitle" class="text-base font-bold text-rose-900 mb-2.5">
+                        Barıştık mı Elif? ❤️
+                    </h3>
+                    <div id="forgiveActionArea" class="flex flex-wrap items-center justify-center gap-3 min-h-[96px] relative">
+                        <button id="yesForgiveBtn"
+                                class="px-5 py-3 rounded-2xl font-bold text-sm text-white bg-gradient-to-r from-rose-500 to-rose-600 shadow-md shadow-rose-500/30 hover:brightness-105 active:scale-95 transition z-10 cursor-pointer">
+                            Evet, Barıştık ❤️
+                        </button>
+                        <button id="noTripBtn"
+                                class="px-4 py-2.5 rounded-2xl font-bold text-xs text-slate-600 bg-slate-200 border border-slate-300 transition-all duration-200 cursor-pointer">
+                            Hala Biraz Trip Atacağım 😤
+                        </button>
+                    </div>
+                    <p id="dodgeHintText" class="text-xs font-bold text-rose-600 min-h-[18px] mt-1.5"></p>
+                </div>
+            </div>
+
+            <!-- Aşama 2: Elif'e Özel VIP Gönül Alma & Randevu Kuponu -->
+            <div id="finaleCouponPhase" class="hidden">
+                <div class="text-5xl mb-2">🥳💖🎉</div>
+                <h2 id="celebrationHeading" class="font-serif-romantic text-2xl sm:text-3xl font-bold text-rose-600 mb-1.5">
+                    Yaşasın! Dünyalar Benim Oldu, Elif!
+                </h2>
+                <p class="text-xs sm:text-sm font-medium text-rose-950/80 mb-4">
+                    Bu güzel kalbin için sana ömür boyu geçerli özel bir telafi kuponu hazırladım, hayatım:
+                </p>
+
+                <div class="bg-gradient-to-br from-amber-50 via-yellow-50 to-rose-50 border-2 border-dashed border-amber-500 rounded-2xl p-5 mb-4 shadow-md">
+                    <span class="inline-block bg-amber-200/80 text-amber-900 border border-amber-400 text-[11px] font-bold px-3 py-1 rounded-full mb-2">
+                        ✨ VIP GÖNÜL ALMA & RANDEVU KUPONU ✨
+                    </span>
+                    <p id="couponOwnerLabel" class="text-xs font-extrabold text-rose-600 uppercase tracking-wider mb-1">
+                        Sahibi: Canım Elif'im 👑
+                    </p>
+                    <div id="couponRewardDisplay" class="text-base sm:text-lg font-bold text-rose-700 leading-snug mb-2">
+                        Sınırsız Kahve + En Sevdiğin Tatlı + Kocaman Özür Sarılması ☕🍫🤗
+                    </div>
+                    <p class="text-xs font-medium text-rose-900/75">
+                        Elif istediği an, istediği yerde, hiçbir itiraz hakkı olmadan kullanıma açıktır!
+                    </p>
+                    <div class="border-t border-dashed border-amber-400 pt-2.5 mt-3 flex flex-wrap justify-between gap-2 text-[11px] font-bold text-amber-900">
+                        <span id="couponDateDisplay">Tarih: Bugün & Sonsuza Dek ♾️</span>
+                        <span id="couponSignDisplay">İmza: Seni çok seven Ali ✍️</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                    <button id="confettiMoreBtn"
+                            class="w-full py-3 rounded-2xl font-bold text-sm text-white bg-gradient-to-r from-rose-500 to-amber-500 shadow-md hover:brightness-105 active:scale-95 transition cursor-pointer">
+                        Kalp Konfetisi Yağdır 💖
+                    </button>
+                    <button id="winReadNotesBtn"
+                            class="flex-1 py-2.5 px-3 rounded-xl font-bold text-xs text-rose-700 bg-white border border-rose-200 hover:bg-rose-50 transition cursor-pointer">
+                        📜 35 Notu Oku
+                    </button>
+                    <button id="replayBtn"
+                            class="flex-1 py-2.5 px-3 rounded-xl font-bold text-xs text-rose-700 bg-white border border-rose-200 hover:bg-rose-50 transition cursor-pointer">
+                        🔄 Tekrar Oyna
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 4. OKUNAN NOTLAR MODALI -->
+    <div id="notesModal" class="hidden fixed inset-0 bg-slate-950/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+        <div class="bg-white border-2 border-rose-200 rounded-3xl w-full max-w-md max-h-[85dvh] p-5 flex flex-col shadow-2xl animate-pop">
+            <div class="flex items-center justify-between mb-2">
+                <h3 class="text-base sm:text-lg font-bold text-rose-700">📜 Elif İçin Açılan Notlar</h3>
+                <button id="closeNotesBtn" class="w-8 h-8 rounded-full bg-rose-100 text-rose-700 font-bold hover:bg-rose-200 cursor-pointer">✕</button>
+            </div>
+            <p class="text-xs font-medium text-rose-900/75 mb-3">
+                Şimdiye kadar açılan tüm cümleler bir mektup gibi sırayla burada (<strong id="notesModalCounter">0 / 35</strong>):
+            </p>
+            <div id="notesModalList" class="flex-1 overflow-y-auto space-y-2 pr-1"></div>
+        </div>
+    </div>
+
+    <!-- 5. ÖZELLEŞTİR & LİNK OLUŞTUR MODALI -->
+    <div id="customizeModal" class="hidden fixed inset-0 bg-slate-950/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+        <div class="bg-white border-2 border-rose-200 rounded-3xl w-full max-w-md max-h-[88dvh] p-5 flex flex-col shadow-2xl animate-pop">
+            <div class="flex items-center justify-between mb-2">
+                <h3 class="text-base sm:text-lg font-bold text-rose-700">✏️ Özelleştir & Link Oluştur</h3>
+                <button id="closeCustomizeBtn" class="w-8 h-8 rounded-full bg-rose-100 text-rose-700 font-bold hover:bg-rose-200 cursor-pointer">✕</button>
+            </div>
+
+            <div class="flex-1 overflow-y-auto space-y-3 pr-1 text-left">
+                <p class="text-xs font-medium text-rose-900/80 bg-rose-50 p-3 rounded-xl border border-rose-100">
+                    Bilgileri düzenleyip <strong>"🔗 Özel Link Oluştur & Kopyala"</strong> butonuna bastığında GitHub Pages üzerinden paylaşabileceğin özel link panoya kopyalanır.
+                </p>
+
+                <div>
+                    <label class="block text-xs font-bold text-rose-800 mb-1">Alıcı Adı (Varsayılan: Elif)</label>
+                    <input id="cfgPartnerName" type="text" placeholder="Örn: Elif"
+                           class="w-full px-3 py-2 rounded-xl border border-rose-200 text-sm focus:outline-none focus:border-rose-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-rose-800 mb-1">Hitap Kelimesi (Varsayılan: Hayatım)</label>
+                    <input id="cfgAffectionTerm" type="text" placeholder="Örn: Hayatım"
+                           class="w-full px-3 py-2 rounded-xl border border-rose-200 text-sm focus:outline-none focus:border-rose-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-rose-800 mb-1">Gönderen Adı (Varsayılan: Ali)</label>
+                    <input id="cfgSenderName" type="text" placeholder="Örn: Ali"
+                           class="w-full px-3 py-2 rounded-xl border border-rose-200 text-sm focus:outline-none focus:border-rose-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-rose-800 mb-1">Finaldeki Özel Özür Mektubu</label>
+                    <textarea id="cfgLetter" rows="3"
+                              class="w-full px-3 py-2 rounded-xl border border-rose-200 text-sm focus:outline-none focus:border-rose-500"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-rose-800 mb-1">VIP Kupon Ödülü</label>
+                    <input id="cfgReward" type="text"
+                           class="w-full px-3 py-2 rounded-xl border border-rose-200 text-sm focus:outline-none focus:border-rose-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-rose-800 mb-1">
+                        35 Hikaye Cümlesi (İstersen satır satır düzenleyebilirsin)
+                    </label>
+                    <textarea id="cfgMessages" rows="4"
+                              class="w-full px-3 py-2 rounded-xl border border-rose-200 text-xs leading-relaxed focus:outline-none focus:border-rose-500"></textarea>
+                </div>
+            </div>
+
+            <div class="mt-3 flex flex-wrap gap-2">
+                <button id="resetCfgBtn"
+                        class="px-3 py-2.5 rounded-xl border border-slate-200 text-slate-600 text-xs font-bold hover:bg-slate-50 cursor-pointer">
+                    Sıfırla
+                </button>
+                <button id="copyShareLinkBtn"
+                        class="flex-1 py-2.5 px-3 rounded-xl border border-amber-400 bg-amber-50 text-amber-800 text-xs font-bold hover:bg-amber-100 cursor-pointer">
+                    🔗 Özel Link Oluştur & Kopyala
+                </button>
+                <button id="saveCfgBtn"
+                        class="w-full py-2.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-rose-500 to-rose-600 shadow-sm hover:brightness-105 cursor-pointer">
+                    Uygula ve Kaydet 💖
+                </button>
+            </div>
+            <p id="shareFeedback" class="text-xs font-bold text-emerald-600 text-center mt-2 min-h-[16px]"></p>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Elif'e Özel 5 Kademeli Gönül Alma Hikayesi
+         * - Alıcı: Elif | Sevgi Hitabı: Hayatım | Gönderen: Ali
+         * - 5 Bölüm x 7 Mesaj = 35 Sıralı Mesaj
+         * - Çok yavaş, sakin okuma hızı (~0.85 - 1.25 px/kare, ~2.6 sn aralık, ekranda en fazla 3 simge)
+         * - Her 7 mesajda bir oyun tamamen durur ve "🎉 YENİ BÖLÜME GEÇTİN! 🎉" kartı açılır.
+         */
+
+        // --- 1. 5 BÖLÜM YAPISI VE 35 SIRALI MESAJ (5 x 7 = 35) ---
+        const STAGES = [
+            {
+                id: 1,
+                shortTitle: "Bölüm 1/5: Pişmanlık & Farkındalık",
+                fullTitle: "1. Bölüm: Pişmanlık & Farkındalık",
+                completedText: "✓ 1. Bölüm: Pişmanlık & Farkındalık Tamamlandı!",
+                desc: "Seni üzdüğüm an kalbimden geçen ilk pişmanlık ve farkındalık cümleleri...",
+                bodyClass: "stage-1",
+                emojis: ["💔", "🩹", "💧", "🤍"],
+                bannerEmoji: "💔 🩹 💧 🤍",
+                endIndex: 6 // 0..6 (7 mesaj)
+            },
+            {
+                id: 2,
+                shortTitle: "Bölüm 2/5: Sen Benim Her Şeyimsin, Elif",
+                fullTitle: "2. Bölüm: Sen Benim Her Şeyimsin, Elif",
+                completedText: "✓ 2. Bölüm: Sen Benim Her Şeyimsin Tamamlandı!",
+                desc: "Hayatımdaki en değerli yerini anlatan kalbimden gelen cümleler, Elif...",
+                bodyClass: "stage-2",
+                emojis: ["❤️", "✨", "🌹", "💖"],
+                bannerEmoji: "❤️ ✨ 🌹 💖",
+                endIndex: 13 // 7..13 (7 mesaj)
+            },
+            {
+                id: 3,
+                shortTitle: "Bölüm 3/5: Birlikte Güzel Anılarımız",
+                fullTitle: "3. Bölüm: Birlikte Güzel Anılarımız",
+                completedText: "✓ 3. Bölüm: Birlikte Güzel Anılarımız Tamamlandı!",
+                desc: "Paylaştığımız kahveler, çikolatalar, şarkılar ve güzel gülüşlerimiz, hayatım...",
+                bodyClass: "stage-3",
+                emojis: ["☕", "🍫", "📸", "🎶"],
+                bannerEmoji: "☕ 🍫 📸 🎶",
+                endIndex: 20 // 14..20 (7 mesaj)
+            },
+            {
+                id: 4,
+                shortTitle: "Bölüm 4/5: Sana Sözlerim & Telafi",
+                fullTitle: "4. Bölüm: Sana Sözlerim & Telafi",
+                completedText: "✓ 4. Bölüm: Sana Sözlerim & Telafi Tamamlandı!",
+                desc: "Bundan sonrası için sana verdiğim içten ve kalıcı sözler, Elif...",
+                bodyClass: "stage-4",
+                emojis: ["💍", "💌", "🎁", "♾️"],
+                bannerEmoji: "💍 💌 🎁 ♾️",
+                endIndex: 27 // 21..27 (7 mesaj)
+            },
+            {
+                id: 5,
+                shortTitle: "Bölüm 5/5: Büyük Final: Kalbimin Kapısı",
+                fullTitle: "5. Bölüm: Büyük Final: Kalbimin Kapısı",
+                completedText: "✓ 5. Bölüm Tamamlandı!",
+                desc: "Son bölüme geldik hayatım! Kalbimin kapısı tamamen senin için açılıyor...",
+                bodyClass: "stage-5",
+                emojis: ["👑", "🗝️", "❤️‍🔥", "🌟"],
+                bannerEmoji: "👑 🗝️ ❤️‍🔥 🌟",
+                endIndex: 34 // 28..34 (7 mesaj)
+            }
+        ];
+
+        const DEFAULT_MESSAGES = [
+            // 1. Bölüm: Pişmanlık & Farkındalık (7 mesaj)
+            "Elif, seni üzdüğüm an kendi kalbim de paramparça oldu...",
+            "Haklısın hayatım, seni kırmayı hiç ama hiç istemezdim...",
+            "Seni üzmek hayatta en son isteyeceğim şeydi, inan bana Elif...",
+            "Senin tek bir damla üzüntün bile bana çok ağır geliyor, hayatım.",
+            "Hatamı tüm kalbimle kabul ediyorum, hiçbir bahanem yok.",
+            "Kalbin bana emanet edilmiş en kıymetli hazine, Elif.",
+            "Seni kırdığım her saniye için içtenlikle özür dilerim, hayatım...",
+
+            // 2. Bölüm: Sen Benim Her Şeyimsin, Elif (7 mesaj)
+            "Sen benim bu hayattaki en güzel şanssın, Elif...",
+            "Gülüşün benim bütün yorgunluğumu bir anda alıyor, hayatım...",
+            "Sen benim her şeyimsin Elif, bunu sakın unutma...",
+            "Yanında kendimi en huzurlu, en tam halimde hissediyorum.",
+            "Seninle geçen her an hayatıma gerçek anlamını katıyor, hayatım.",
+            "Varlığın bana her gün yeniden yaşama sevinci veriyor, Elif.",
+            "İyi ki varsın hayatım, iyi ki benimlesin...",
+
+            // 3. Bölüm: Birlikte Güzel Anılarımız (7 mesaj)
+            "Birlikte içtiğimiz o kahvelerin tadı bile seninle başka güzel, Elif.",
+            "Kahkahalarımızın yankılandığı anları hiçbir şeye değişmem, hayatım.",
+            "Seninle sıradan bir yürüyüş bile en güzel masal gibi, Elif.",
+            "Elini tuttuğumda dünyadaki bütün dertleri unutuyorum, hayatım.",
+            "Bana sevgiyle baktığın o güzel gözlerine aşığım, Elif.",
+            "Seninle biriktireceğimiz daha nice güzel anımız var, hayatım.",
+            "En yorgun günümü bile tek mesajınla bahara çeviriyorsun, Elif...",
+
+            // 4. Bölüm: Sana Sözlerim & Telafi (7 mesaj)
+            "Bundan sonra seni her zamankinden daha dikkatli dinleyeceğim Elif, söz.",
+            "Seni asla üzgün uyutmayacağıma söz veriyorum, hayatım.",
+            "Kalbindeki her kırığı sevgimle tek tek saracağım, Elif.",
+            "Bir daha aynı hatayı tekrarlamayacağıma söz veriyorum, hayatım.",
+            "Sana bolca sarılma ve gönül alma borcum var, Elif!",
+            "Senin mutluluğun her zaman benim ilk önceliğim olacak, hayatım.",
+            "Ne olursa olsun elini hiç bırakmayacağım, Elif...",
+
+            // 5. Bölüm: Büyük Final: Kalbimin Kapısı (7 mesaj)
+            "Sen benim dünyamın tek merkezisin, Elif...",
+            "Sensiz bir an bile eksik ve yarım kalır, hayatım.",
+            "Seni seviyorum Elif, hem de her şeyden ve herkesten çok!",
+            "O güzel yüzünde küçük bir gülümseme belirdi mi, hayatım?",
+            "Gözlerinin içi yeniden parlasın istiyorum, Elif...",
+            "Son bir adım kaldı, kalbimin kapısı tamamen senin, hayatım...",
+            "Ve işte sana söylemek istediğim asıl şey, Canım Elif'im..."
+        ];
+
+        const TRIP_REACTIONS = [
+            "Tamam Elif, haklısın 😅",
+            "Trip hakkın saklıdır hayatım 🙈",
+            "Söz telafi edeceğim Elif ❤️",
+            "Bu bulutu da sevgimle dağıtıyorum hayatım ☀️💕",
+            "Haklısın Elif, kızmakta sonuna kadar serbestsin 🥺"
+        ];
+
+        const DEFAULT_CONFIG = {
+            partnerName: "Elif",
+            affectionTerm: "Hayatım",
+            senderName: "Ali",
+            letter: "Canım Elif'im, seni kırdığım ve üzdüğüm için gerçekten çok özür dilerim. Senin yüzündeki tek bir gülümseme benim için dünyalara bedel. Hatalarımı telafi etmek ve seni hep mutlu etmek istiyorum. İyi ki hayatımdasın hayatım, seni her şeyden çok seviyorum! ❤️",
+            reward: "Sınırsız Kahve + En Sevdiğin Tatlı + Kocaman Özür Sarılması ☕🍫🤗",
+            messages: [...DEFAULT_MESSAGES]
+        };
+
+        let config = { ...DEFAULT_CONFIG, messages: [...DEFAULT_MESSAGES] };
+
+        // --- 2. URL PARAMETRELERİ VE KİŞİSELLEŞTİRME ---
+        function loadConfig() {
+            try {
+                const saved = localStorage.getItem("elif_5_kademe_hikaye_v1");
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    config = {
+                        ...DEFAULT_CONFIG,
+                        ...parsed,
+                        messages: Array.isArray(parsed.messages) && parsed.messages.length > 0
+                            ? parsed.messages
+                            : [...DEFAULT_MESSAGES]
+                    };
+                }
+            } catch (e) {}
+
+            try {
+                const params = new URLSearchParams(window.location.search);
+                if (params.has("to")) config.partnerName = params.get("to") || DEFAULT_CONFIG.partnerName;
+                if (params.has("term")) config.affectionTerm = params.get("term") || DEFAULT_CONFIG.affectionTerm;
+                if (params.has("from")) config.senderName = params.get("from") || DEFAULT_CONFIG.senderName;
+                if (params.has("letter")) config.letter = params.get("letter") || DEFAULT_CONFIG.letter;
+                if (params.has("coupon")) config.reward = params.get("coupon") || DEFAULT_CONFIG.reward;
+            } catch (e) {}
+
+            syncUIWithConfig();
+        }
+
+        function syncUIWithConfig() {
+            const pName = (config.partnerName || "Elif").trim();
+            const term = (config.affectionTerm || "Hayatım").trim();
+            const termLower = term.toLocaleLowerCase("tr-TR");
+            const sName = (config.senderName || "Ali").trim();
+            const total = config.messages.length;
+
+            document.getElementById("introHeading").textContent =
+                `${pName}, Sana 5 Kademeli Bir Hikayem Var ✨`;
+
+            document.getElementById("introSubtitle").textContent =
+                `${term}, seni üzdüğüm için gerçekten çok pişmanım... Kalbimden geçen ${total} cümleyi 5 bölümlük çok sakin ve yavaş bir yolculuğa sakladım. Süzülen sevgi tanelerini topladıkça her cümleyi acele etmeden rahatça okuyabilir, her bölüm sonunda yeni sayfaya birlikte geçebiliriz. ❤️`;
+
+            document.getElementById("startBtn").textContent =
+                `1. Bölüme Başla, ${pName} 💖`;
+
+            document.getElementById("winHeading").textContent =
+                `${total} Cümlenin Tamamını Topladın, ${pName}!`;
+
+            document.getElementById("letterGreetingBadge").textContent =
+                `Canım ${pName}'im 💌`;
+
+            document.getElementById("finalLetterDisplay").textContent = config.letter;
+            document.getElementById("finalSignatureDisplay").textContent =
+                `- Seni çok seven ${sName}`;
+
+            document.getElementById("forgiveQuestionTitle").textContent =
+                `Barıştık mı ${pName}? ❤️`;
+
+            document.getElementById("celebrationHeading").textContent =
+                `Yaşasın! Dünyalar Benim Oldu, ${pName}!`;
+
+            document.getElementById("couponOwnerLabel").textContent =
+                `Sahibi: Canım ${pName}'im 👑`;
+
+            document.getElementById("couponRewardDisplay").textContent = config.reward;
+            document.getElementById("couponSignDisplay").textContent =
+                `İmza: Seni çok seven ${sName} ✍️`;
+
+            document.getElementById("storyStepLabel").textContent =
+                `İlk sevgi tanesini yakala, ${termLower} ✨`;
+
+            // Modal inputları
+            document.getElementById("cfgPartnerName").value = pName;
+            document.getElementById("cfgAffectionTerm").value = term;
+            document.getElementById("cfgSenderName").value = sName;
+            document.getElementById("cfgLetter").value = config.letter;
+            document.getElementById("cfgReward").value = config.reward;
+            document.getElementById("cfgMessages").value = config.messages.join("\n");
+        }
+
+        // --- 3. ARKA PLAN YÜZEN SÜSLEMELER ---
+        function initAmbientHearts() {
+            const container = document.getElementById("ambientBg");
+            const icons = ["💖", "💕", "🌹", "✨", "💗", "💫"];
+            for (let i = 0; i < 15; i++) {
+                const el = document.createElement("div");
+                el.className = "ambient-heart";
+                el.textContent = icons[i % icons.length];
+                el.style.left = `${Math.random() * 100}%`;
+                el.style.fontSize = `${16 + Math.random() * 16}px`;
+                el.style.animationDuration = `${13 + Math.random() * 9}s`;
+                el.style.animationDelay = `${-Math.random() * 15}s`;
+                container.appendChild(el);
+            }
+        }
+
+        // --- 4. WEB AUDIO API YUMUŞAK SES EFEKTLERİ ---
+        let audioCtx = null;
+        let isSoundOn = true;
+        const MELODY_NOTES = [523.25, 587.33, 659.25, 783.99, 880.0, 1046.5, 987.77, 783.99];
+
+        function playSoftSound(type, step = 0) {
+            if (!isSoundOn) return;
+            try {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                if (audioCtx.state === "suspended") audioCtx.resume();
+                const now = audioCtx.currentTime;
+
+                if (type === "catch") {
+                    const freq = MELODY_NOTES[step % MELODY_NOTES.length];
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.type = "sine";
+                    osc.frequency.setValueAtTime(freq, now);
+                    gain.gain.setValueAtTime(0.001, now);
+                    gain.gain.linearRampToValueAtTime(0.11, now + 0.02);
+                    gain.gain.exponentialRampToValueAtTime(0.0008, now + 0.42);
+                    osc.start(now);
+                    osc.stop(now + 0.44);
+                } else if (type === "stageUp" || type === "win") {
+                    const chord = type === "win"
+                        ? [523.25, 659.25, 783.99, 1046.5, 1318.51]
+                        : [523.25, 659.25, 783.99, 1046.5];
+                    chord.forEach((f, idx) => {
+                        const osc = audioCtx.createOscillator();
+                        const gain = audioCtx.createGain();
+                        osc.connect(gain);
+                        gain.connect(audioCtx.destination);
+                        osc.type = "triangle";
+                        const t0 = now + idx * 0.09;
+                        osc.frequency.setValueAtTime(f, t0);
+                        gain.gain.setValueAtTime(0.001, t0);
+                        gain.gain.linearRampToValueAtTime(0.11, t0 + 0.03);
+                        gain.gain.exponentialRampToValueAtTime(0.0008, t0 + 0.55);
+                        osc.start(t0);
+                        osc.stop(t0 + 0.57);
+                    });
+                } else if (type === "trip") {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.type = "sine";
+                    osc.frequency.setValueAtTime(270, now);
+                    osc.frequency.linearRampToValueAtTime(190, now + 0.22);
+                    gain.gain.setValueAtTime(0.08, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.24);
+                    osc.start(now);
+                    osc.stop(now + 0.25);
+                }
+            } catch (e) {}
+        }
+
+        document.getElementById("soundToggleBtn").addEventListener("click", (e) => {
+            isSoundOn = !isSoundOn;
+            e.currentTarget.textContent = isSoundOn ? "🔊" : "🔇";
+            if (isSoundOn) playSoftSound("catch", 2);
+        });
+
+        // --- 5. OYUN MOTORU (ÇOK YAVAŞ OKUMA TEMPOSU + BÖLÜM ARASI TAM DURAKLATMA) ---
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+
+        const state = {
+            running: false,
+            stagePaused: false,    // Bölüm geçişinde tamamen duraklatır
+            modalPaused: false,    // Okunan Notlar veya Özelleştir modalı açıkken duraklatır
+            unlockedCount: 0,
+            stageIdx: 0,
+            spawnTimerMs: 0,
+            nextSpawnDelayMs: 2600, // ~2.6 saniyede 1 sakin simge
+            items: [],
+            particles: [],
+            floatTexts: [],
+            basket: {
+                x: 0,
+                y: 0,
+                targetX: 0,
+                width: 96,
+                height: 56,
+                wobble: 0,
+                slowTimer: 0,
+                trail: []
+            },
+            keys: { left: false, right: false }
+        };
+
+        function getStageIndexForMessage(msgIdx) {
+            const total = config.messages.length;
+            if (total === DEFAULT_MESSAGES.length) {
+                for (let i = 0; i < STAGES.length; i++) {
+                    if (msgIdx <= STAGES[i].endIndex) return i;
+                }
+                return STAGES.length - 1;
+            }
+            const ratio = msgIdx / Math.max(1, total);
+            return Math.min(STAGES.length - 1, Math.floor(ratio * STAGES.length));
+        }
+
+        function applyStageTheme(stageIdx) {
+            const st = STAGES[stageIdx];
+            document.body.className = st.bodyClass;
+            document.getElementById("hudStageBadge").textContent = st.shortTitle;
+        }
+
+        // Bölüm tamamlandığında oyunu tamamen durdur, simgeleri temizle ve "YENİ BÖLÜME GEÇTİN!" kartını aç
+        function pauseForStageTransition(prevStageIdx, nextStageIdx) {
+            state.stagePaused = true;
+            state.items = []; // Ekrandaki tüm düşen simgeleri temizle
+            state.basket.slowTimer = 0;
+
+            const prevSt = STAGES[prevStageIdx];
+            const nextSt = STAGES[nextStageIdx];
+            playSoftSound("stageUp");
+            burstDomConfetti(34);
+
+            const overlay = document.getElementById("stageBannerOverlay");
+            document.getElementById("completedStageSummary").textContent = prevSt.completedText;
+            document.getElementById("bannerEmoji").textContent = nextSt.bannerEmoji;
+            document.getElementById("bannerSub").textContent = `Bölüm ${nextSt.id} / 5`;
+            document.getElementById("bannerTitle").textContent = nextSt.fullTitle;
+            document.getElementById("bannerDesc").textContent = nextSt.desc;
+
+            overlay.classList.remove("hidden");
+        }
+
+        document.getElementById("continueStageBtn").addEventListener("click", () => {
+            document.getElementById("stageBannerOverlay").classList.add("hidden");
+            state.stagePaused = false;
+            state.spawnTimerMs = 1900; // Devam edince ilk simge ~0.7 sn içinde sakin şekilde gelsin
+            lastFrameTime = performance.now();
+            playSoftSound("catch", 3);
+        });
+
+        function resizeCanvas() {
+            const rect = canvas.parentElement.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+            state.basket.y = canvas.height - 76;
+            if (state.basket.x === 0) {
+                state.basket.x = canvas.width / 2;
+                state.basket.targetX = canvas.width / 2;
+            } else {
+                state.basket.x = Math.max(52, Math.min(canvas.width - 52, state.basket.x));
+                state.basket.targetX = state.basket.x;
+            }
+        }
+        window.addEventListener("resize", resizeCanvas);
+
+        // Dokunmatik, Fare ve Klavye Kontrolleri
+        function moveBasketTarget(clientX) {
+            const rect = canvas.getBoundingClientRect();
+            const relX = clientX - rect.left;
+            const half = state.basket.width / 2;
+            state.basket.targetX = Math.max(half + 8, Math.min(canvas.width - half - 8, relX));
+        }
+
+        canvas.addEventListener("pointermove", (e) => {
+            if (!state.running || state.stagePaused || state.modalPaused) return;
+            moveBasketTarget(e.clientX);
+        });
+        canvas.addEventListener("pointerdown", (e) => {
+            if (!state.running || state.stagePaused || state.modalPaused) return;
+            moveBasketTarget(e.clientX);
+        });
+        canvas.addEventListener("touchmove", (e) => {
+            if (!state.running || state.stagePaused || state.modalPaused) return;
+            e.preventDefault();
+            if (e.touches[0]) moveBasketTarget(e.touches[0].clientX);
+        }, { passive: false });
+
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A") state.keys.left = true;
+            if (e.key === "ArrowRight" || e.key === "d" || e.key === "D") state.keys.right = true;
+        });
+        window.addEventListener("keyup", (e) => {
+            if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A") state.keys.left = false;
+            if (e.key === "ArrowRight" || e.key === "d" || e.key === "D") state.keys.right = false;
+        });
+
+        function showTripToast() {
+            const area = document.getElementById("tripToastArea");
+            const msg = TRIP_REACTIONS[Math.floor(Math.random() * TRIP_REACTIONS.length)];
+            area.innerHTML = `
+                <div class="animate-pop bg-white/95 border border-rose-300 text-rose-900 px-3.5 py-1 rounded-full text-xs font-bold shadow-md">
+                    ☁️ ${msg} (1.5 sn yavaşladı)
+                </div>
+            `;
+        }
+
+        function spawnCatchParticles(x, y, isTrip = false) {
+            const count = isTrip ? 9 : 14;
+            for (let i = 0; i < count; i++) {
+                const angle = (Math.PI * 2 * i) / count + Math.random() * 0.4;
+                const spd = 1.6 + Math.random() * 2.8;
+                state.particles.push({
+                    x,
+                    y,
+                    vx: Math.cos(angle) * spd,
+                    vy: Math.sin(angle) * spd - 0.9,
+                    alpha: 1,
+                    size: 4 + Math.random() * 4,
+                    isHeart: !isTrip && i % 2 === 0,
+                    color: isTrip ? "#64748B" : (i % 2 === 0 ? "#E11D48" : "#F59E0B")
+                });
+            }
+        }
+
+        function spawnGentleItem() {
+            // Ekranda aynı anda en fazla 3 nesne olsun
+            if (state.items.length >= 3) return;
+
+            const isTrip = Math.random() < 0.18;
+            const st = STAGES[state.stageIdx];
+            const emoji = isTrip
+                ? "☁️"
+                : st.emojis[Math.floor(Math.random() * st.emojis.length)];
+
+            const margin = 44;
+            const x = margin + Math.random() * (canvas.width - margin * 2);
+
+            // ÇOK YAVAŞ OKUMA TEMPOSU: 0.85 - 1.25 px/kare
+            const verySlowSpeed = 0.85 + Math.random() * 0.4;
+
+            state.items.push({
+                x,
+                y: -28,
+                vy: verySlowSpeed,
+                emoji,
+                isTrip,
+                swayPhase: Math.random() * Math.PI * 2
+            });
+
+            // ~2.6 saniyede bir yeni simge gelsin
+            state.nextSpawnDelayMs = 2450 + Math.random() * 350;
+        }
+
+        function updateStoryHUD() {
+            const total = config.messages.length;
+            const count = state.unlockedCount;
+            const pct = Math.min(100, Math.round((count / total) * 100));
+
+            document.getElementById("hudProgressBadge").textContent = `${count} / ${total} (%${pct})`;
+            document.getElementById("hudProgressFill").style.width = `${pct}%`;
+            document.getElementById("notesBadgeCount").textContent = count;
+
+            if (count > 0 && count <= total) {
+                const st = STAGES[state.stageIdx];
+                document.getElementById("storyStepLabel").textContent =
+                    `Mesaj ${count} / ${total} • ${st.fullTitle}`;
+
+                const msgEl = document.getElementById("storyLiveText");
+                const boxEl = document.getElementById("storyCardBox");
+
+                msgEl.classList.remove("animate-pop");
+                boxEl.classList.remove("story-pulse");
+                void msgEl.offsetWidth;
+
+                msgEl.textContent = `“${config.messages[count - 1]}”`;
+                msgEl.classList.add("animate-pop");
+                boxEl.classList.add("story-pulse");
+            }
+        }
+
+        function drawMiniHeart(ctx, x, y, size, color) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            const topCurveHeight = size * 0.3;
+            ctx.moveTo(0, topCurveHeight);
+            ctx.bezierCurveTo(0, 0, -size / 2, 0, -size / 2, topCurveHeight);
+            ctx.bezierCurveTo(-size / 2, (size + topCurveHeight) / 2, 0, (size + topCurveHeight) / 1.4, 0, size);
+            ctx.bezierCurveTo(0, (size + topCurveHeight) / 1.4, size / 2, (size + topCurveHeight) / 2, size / 2, topCurveHeight);
+            ctx.bezierCurveTo(size / 2, 0, 0, 0, 0, topCurveHeight);
+            ctx.fill();
+            ctx.restore();
+        }
+
+        function drawBasket(timestamp) {
+            const b = state.basket;
+            const isSlowed = b.slowTimer > 0;
+
+            for (let i = 0; i < b.trail.length; i++) {
+                const tr = b.trail[i];
+                const ratio = (i + 1) / b.trail.length;
+                ctx.save();
+                ctx.globalAlpha = ratio * 0.18;
+                ctx.fillStyle = isSlowed ? "#94A3B8" : "#FB7185";
+                ctx.beginPath();
+                ctx.ellipse(tr.x, b.y + 6, (b.width * 0.42) * ratio, 11 * ratio, 0, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+
+            ctx.save();
+            ctx.translate(b.x, b.y);
+
+            if (isSlowed) {
+                ctx.rotate(Math.sin(timestamp / 55) * 0.07);
+            }
+
+            const sx = 1 + Math.sin(b.wobble) * 0.08;
+            const sy = 1 - Math.sin(b.wobble) * 0.08;
+            ctx.scale(sx, sy);
+
+            ctx.shadowColor = isSlowed ? "rgba(100, 116, 139, 0.35)" : "rgba(225, 29, 72, 0.45)";
+            ctx.shadowBlur = 16;
+
+            ctx.fillStyle = "rgba(0, 0, 0, 0.14)";
+            ctx.beginPath();
+            ctx.ellipse(0, 27, b.width * 0.48, 9, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            const grad = ctx.createLinearGradient(0, -18, 0, 25);
+            if (isSlowed) {
+                grad.addColorStop(0, "#CBD5E1");
+                grad.addColorStop(1, "#64748B");
+            } else {
+                grad.addColorStop(0, "#FDA4AF");
+                grad.addColorStop(1, "#E11D48");
+            }
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.roundRect(-b.width / 2, -12, b.width, 35, [8, 8, 22, 22]);
+            ctx.fill();
+
+            ctx.shadowBlur = 0;
+
+            ctx.fillStyle = "#FFF1F2";
+            ctx.beginPath();
+            ctx.roundRect(-b.width / 2 - 4, -18, b.width + 8, 9, 6);
+            ctx.fill();
+
+            ctx.font = "23px sans-serif";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(isSlowed ? "🥶" : "💝", 0, 6);
+
+            ctx.restore();
+        }
+
+        let lastFrameTime = 0;
+
+        function gameLoop(timestamp) {
+            if (!state.running) return;
+            const dt = lastFrameTime ? Math.min(50, timestamp - lastFrameTime) : 16.667;
+            const dtFactor = dt / 16.667;
+            lastFrameTime = timestamp;
+
+            // Bölüm geçişi veya modal açıkken tamamen duraklat
+            if (state.stagePaused || state.modalPaused) {
+                requestAnimationFrame(gameLoop);
+                return;
+            }
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            if (state.basket.slowTimer > 0) {
+                state.basket.slowTimer = Math.max(0, state.basket.slowTimer - dt);
+            }
+
+            const keySpeed = (state.basket.slowTimer > 0 ? 4.2 : 9.0) * dtFactor;
+            if (state.keys.left) {
+                state.basket.targetX = Math.max(52, state.basket.targetX - keySpeed);
+            }
+            if (state.keys.right) {
+                state.basket.targetX = Math.min(canvas.width - 52, state.basket.targetX + keySpeed);
+            }
+
+            const lerp = state.basket.slowTimer > 0 ? 0.08 : 0.25;
+            state.basket.x += (state.basket.targetX - state.basket.x) * lerp;
+
+            state.basket.trail.push({ x: state.basket.x });
+            if (state.basket.trail.length > 7) state.basket.trail.shift();
+
+            if (state.basket.wobble > 0) {
+                state.basket.wobble = Math.max(0, state.basket.wobble - 0.16 * dtFactor);
+            }
+
+            // Yeni obje üretimi (~2.6 saniyede 1 sakin simge)
+            state.spawnTimerMs += dt;
+            if (state.spawnTimerMs >= state.nextSpawnDelayMs) {
+                spawnGentleItem();
+                state.spawnTimerMs = 0;
+            }
+
+            // Düşen objeleri güncelle ve çiz
+            for (let i = state.items.length - 1; i >= 0; i--) {
+                const item = state.items[i];
+                item.y += item.vy * dtFactor;
+                item.swayPhase += 0.024 * dtFactor;
+                item.x += Math.sin(item.swayPhase) * 0.3 * dtFactor;
+
+                ctx.font = "35px sans-serif";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText(item.emoji, item.x, item.y);
+
+                const dx = Math.abs(item.x - state.basket.x);
+                const dy = Math.abs(item.y - state.basket.y);
+
+                if (dx < state.basket.width * 0.56 && dy < 32) {
+                    state.basket.wobble = Math.PI;
+
+                    if (item.isTrip) {
+                        playSoftSound("trip");
+                        state.basket.slowTimer = 1500;
+                        showTripToast();
+                        spawnCatchParticles(item.x, item.y, true);
+                        state.floatTexts.push({
+                            x: item.x,
+                            y: item.y - 16,
+                            text: "Trip Bulutu 😅",
+                            color: "#475569",
+                            alpha: 1
+                        });
+                        state.items.splice(i, 1);
+                        continue;
+                    } else {
+                        playSoftSound("catch", state.unlockedCount);
+                        state.unlockedCount++;
+                        spawnCatchParticles(item.x, item.y, false);
+                        state.floatTexts.push({
+                            x: item.x,
+                            y: item.y - 16,
+                            text: "+1 Sevgi 💖",
+                            color: "#E11D48",
+                            alpha: 1
+                        });
+
+                        state.items.splice(i, 1);
+
+                        // Tüm 35 cümle tamamlandıysa büyük finale geç
+                        if (state.unlockedCount >= config.messages.length) {
+                            updateStoryHUD();
+                            setTimeout(triggerFinale, 950);
+                            return;
+                        }
+
+                        // Yeni bölüme geçildi mi kontrol et
+                        const nextSt = getStageIndexForMessage(state.unlockedCount);
+                        if (nextSt > state.stageIdx) {
+                            const prevSt = state.stageIdx;
+                            updateStoryHUD();
+                            state.stageIdx = nextSt;
+                            applyStageTheme(nextSt);
+                            pauseForStageTransition(prevSt, nextSt);
+                            break;
+                        } else {
+                            updateStoryHUD();
+                        }
+                        continue;
+                    }
+                }
+
+                if (item.y > canvas.height + 40) {
+                    state.items.splice(i, 1);
+                }
+            }
+
+            // Parçacıkları çiz
+            for (let i = state.particles.length - 1; i >= 0; i--) {
+                const p = state.particles[i];
+                p.x += p.vx * dtFactor;
+                p.y += p.vy * dtFactor;
+                p.vy += 0.11 * dtFactor;
+                p.alpha -= 0.022 * dtFactor;
+
+                if (p.alpha <= 0) {
+                    state.particles.splice(i, 1);
+                    continue;
+                }
+
+                ctx.save();
+                ctx.globalAlpha = p.alpha;
+                if (p.isHeart) {
+                    drawMiniHeart(ctx, p.x, p.y, p.size * 2.1, p.color);
+                } else {
+                    ctx.fillStyle = p.color;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                ctx.restore();
+            }
+
+            // Uçuşan yazıları çiz
+            for (let i = state.floatTexts.length - 1; i >= 0; i--) {
+                const ft = state.floatTexts[i];
+                ft.y -= 1.1 * dtFactor;
+                ft.alpha -= 0.018 * dtFactor;
+
+                if (ft.alpha <= 0) {
+                    state.floatTexts.splice(i, 1);
+                    continue;
+                }
+
+                ctx.save();
+                ctx.globalAlpha = ft.alpha;
+                ctx.font = "bold 15px 'Plus Jakarta Sans', sans-serif";
+                ctx.fillStyle = ft.color;
+                ctx.textAlign = "center";
+                ctx.fillText(ft.text, ft.x, ft.y);
+                ctx.restore();
+            }
+
+            drawBasket(timestamp);
+            requestAnimationFrame(gameLoop);
+        }
+
+        function startGame() {
+            const pName = (config.partnerName || "Elif").trim();
+            const termLower = (config.affectionTerm || "Hayatım").trim().toLocaleLowerCase("tr-TR");
+
+            document.getElementById("startScreen").classList.add("hidden");
+            document.getElementById("winScreen").classList.add("hidden");
+            document.getElementById("stageBannerOverlay").classList.add("hidden");
+            document.getElementById("gameScreen").classList.remove("hidden");
+            document.getElementById("readNotesBtn").classList.remove("hidden");
+
+            resizeCanvas();
+            state.running = true;
+            state.stagePaused = false;
+            state.modalPaused = false;
+            state.unlockedCount = 0;
+            state.stageIdx = 0;
+            state.items = [];
+            state.particles = [];
+            state.floatTexts = [];
+            state.basket.slowTimer = 0;
+            state.basket.trail = [];
+            state.spawnTimerMs = 1950; // İlk simge ~0.65 sn içinde sakin şekilde gelsin
+            lastFrameTime = 0;
+
+            applyStageTheme(0);
+            document.getElementById("tripToastArea").innerHTML = "";
+            document.getElementById("storyStepLabel").textContent = `İlk sevgi tanesini yakala, ${termLower} ✨`;
+            document.getElementById("storyLiveText").textContent =
+                `Yavaşça süzülen ilk simgeyi yakaladığında ilk cümlem açılacak, ${pName}... 💌`;
+            updateStoryHUD();
+
+            requestAnimationFrame(gameLoop);
+        }
+
+        // --- 6. KONFETİ & BÜYÜK FİNAL ---
+        function burstDomConfetti(count = 44) {
+            const symbols = ["❤️", "💖", "💕", "✨", "🌹", "🥰", "🎉", "💝"];
+            for (let i = 0; i < count; i++) {
+                const el = document.createElement("div");
+                el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                el.style.position = "fixed";
+                el.style.left = `${Math.random() * 100}vw`;
+                el.style.top = "-36px";
+                el.style.fontSize = `${18 + Math.random() * 20}px`;
+                el.style.zIndex = "70";
+                el.style.pointerEvents = "none";
+                el.style.transition = `transform ${2.3 + Math.random() * 1.6}s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 2.9s ease-out`;
+                document.body.appendChild(el);
+
+                requestAnimationFrame(() => {
+                    const drift = (Math.random() - 0.5) * 200;
+                    const rot = (Math.random() - 0.5) * 540;
+                    el.style.transform = `translate(${drift}px, 108vh) rotate(${rot}deg)`;
+                    el.style.opacity = "0";
+                });
+
+                setTimeout(() => el.remove(), 4100);
+            }
+        }
+
+        function triggerFinale() {
+            state.running = false;
+            playSoftSound("win");
+            burstDomConfetti(55);
+
+            document.getElementById("gameScreen").classList.add("hidden");
+            document.getElementById("stageBannerOverlay").classList.add("hidden");
+            document.getElementById("winScreen").classList.remove("hidden");
+            document.getElementById("finaleLetterPhase").classList.remove("hidden");
+            document.getElementById("finaleCouponPhase").classList.add("hidden");
+
+            const today = new Date().toLocaleDateString("tr-TR", {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            });
+            document.getElementById("couponDateDisplay").textContent = `Tarih: ${today} ♾️`;
+
+            resetNoButton();
+        }
+
+        // --- 7. KAÇAN ŞAKACI "HALA BİRAZ TRİP ATACAĞIM" BUTONU ---
+        let dodgeCount = 0;
+        const DODGE_TEXTS = [
+            "Emin misin Elif? 🥺",
+            "Bak çok pişmanım hayatım... 🙈",
+            "Son kararın mı Elif? 🌹",
+            "Tıklayamazsın ki 😜",
+            "Pes ettim, barıştık Elif ❤️"
+        ];
+        const DODGE_HINTS = [
+            "Bu buton bile Elif'in bana kıyamayacağını biliyor 💕",
+            "Hadi ama hayatım, o güzel gülüşünü saklama benden 🌹",
+            "Bak buton bile kaçıyor senden Elif 🙈",
+            "Son bir şans daha veriyorum hayatım... 🍫",
+            "Artık kaçacak yer kalmadı Elif, barıştık sayıyorum! 🥰"
+        ];
+
+        function resetNoButton() {
+            dodgeCount = 0;
+            const btn = document.getElementById("noTripBtn");
+            btn.textContent = "Hala Biraz Trip Atacağım 😤";
+            btn.style.transform = "translate(0px, 0px) scale(1)";
+            btn.style.opacity = "1";
+            btn.classList.remove("hidden");
+            document.getElementById("dodgeHintText").textContent = "";
+        }
+
+        function handleNoButtonDodge(e) {
+            e.preventDefault();
+            const btn = document.getElementById("noTripBtn");
+            const hint = document.getElementById("dodgeHintText");
+
+            if (dodgeCount < DODGE_TEXTS.length) {
+                btn.textContent = DODGE_TEXTS[dodgeCount];
+                hint.textContent = DODGE_HINTS[dodgeCount];
+            }
+
+            dodgeCount++;
+            playSoftSound("trip");
+
+            if (dodgeCount >= 5) {
+                setTimeout(() => {
+                    btn.style.opacity = "0";
+                    setTimeout(() => btn.classList.add("hidden"), 200);
+                }, 420);
+                return;
+            }
+
+            const tx = (Math.random() - 0.5) * 130;
+            const ty = (Math.random() - 0.5) * 42;
+            const sc = Math.max(0.68, 1 - dodgeCount * 0.07);
+            btn.style.transform = `translate(${tx}px, ${ty}px) scale(${sc})`;
+        }
+
+        const noTripBtn = document.getElementById("noTripBtn");
+        noTripBtn.addEventListener("pointerenter", handleNoButtonDodge);
+        noTripBtn.addEventListener("touchstart", handleNoButtonDodge, { passive: false });
+        noTripBtn.addEventListener("click", handleNoButtonDodge);
+
+        document.getElementById("yesForgiveBtn").addEventListener("click", () => {
+            playSoftSound("win");
+            burstDomConfetti(65);
+            document.getElementById("finaleLetterPhase").classList.add("hidden");
+            document.getElementById("finaleCouponPhase").classList.remove("hidden");
+        });
+
+        // --- 8. OKUNAN NOTLAR MODALI ---
+        const notesModal = document.getElementById("notesModal");
+
+        function openNotesModal() {
+            if (state.running) state.modalPaused = true;
+            const list = document.getElementById("notesModalList");
+            const total = config.messages.length;
+            const count = state.unlockedCount;
+
+            document.getElementById("notesModalCounter").textContent = `${count} / ${total}`;
+
+            if (count === 0) {
+                list.innerHTML = `
+                    <div class="bg-rose-50 border border-rose-100 rounded-2xl p-6 text-center text-xs font-semibold text-rose-900/75">
+                        Henüz hiç sevgi tanesi yakalamadın Elif. Düşen simgeleri yakaladıkça tüm cümleler kronolojik olarak burada birikecek! 💌
+                    </div>
+                `;
+            } else {
+                let html = "";
+                for (let i = 0; i < count; i++) {
+                    const st = STAGES[getStageIndexForMessage(i)];
+                    html += `
+                        <div class="bg-rose-50/90 border border-rose-200/80 rounded-2xl p-3 text-left">
+                            <div class="flex items-center justify-between text-[10px] font-bold text-rose-600 mb-1">
+                                <span>#${i + 1} • ${st.fullTitle}</span>
+                                <span>${st.emojis[i % st.emojis.length]}</span>
+                            </div>
+                            <p class="text-xs sm:text-sm font-bold text-rose-950 leading-snug">
+                                “${config.messages[i]}”
+                            </p>
+                        </div>
+                    `;
+                }
+                list.innerHTML = html;
+            }
+
+            notesModal.classList.remove("hidden");
+        }
+
+        function closeNotesModal() {
+            notesModal.classList.add("hidden");
+            if (state.running) {
+                state.modalPaused = false;
+                lastFrameTime = performance.now();
+            }
+        }
+
+        document.getElementById("readNotesBtn").addEventListener("click", openNotesModal);
+        document.getElementById("winReadNotesBtn").addEventListener("click", openNotesModal);
+        document.getElementById("closeNotesBtn").addEventListener("click", closeNotesModal);
+        notesModal.addEventListener("click", (e) => {
+            if (e.target === notesModal) closeNotesModal();
+        });
+
+        // --- 9. ÖZELLEŞTİR & PAYLAŞILABİLİR LİNK MODALI ---
+        const customizeModal = document.getElementById("customizeModal");
+
+        function readFormToConfig() {
+            config.partnerName = document.getElementById("cfgPartnerName").value.trim() || DEFAULT_CONFIG.partnerName;
+            config.affectionTerm = document.getElementById("cfgAffectionTerm").value.trim() || DEFAULT_CONFIG.affectionTerm;
+            config.senderName = document.getElementById("cfgSenderName").value.trim() || DEFAULT_CONFIG.senderName;
+            config.letter = document.getElementById("cfgLetter").value.trim() || DEFAULT_CONFIG.letter;
+            config.reward = document.getElementById("cfgReward").value.trim() || DEFAULT_CONFIG.reward;
+
+            const lines = document.getElementById("cfgMessages").value
+                .split("\n")
+                .map(l => l.trim())
+                .filter(l => l.length > 0);
+            config.messages = lines.length > 0 ? lines : [...DEFAULT_MESSAGES];
+        }
+
+        document.getElementById("customizeBtn").addEventListener("click", () => {
+            if (state.running) state.modalPaused = true;
+            document.getElementById("shareFeedback").textContent = "";
+            customizeModal.classList.remove("hidden");
+        });
+
+        function closeCustomizeModal() {
+            customizeModal.classList.add("hidden");
+            if (state.running && notesModal.classList.contains("hidden")) {
+                state.modalPaused = false;
+                lastFrameTime = performance.now();
+            }
+        }
+
+        document.getElementById("closeCustomizeBtn").addEventListener("click", closeCustomizeModal);
+        customizeModal.addEventListener("click", (e) => {
+            if (e.target === customizeModal) closeCustomizeModal();
+        });
+
+        document.getElementById("saveCfgBtn").addEventListener("click", () => {
+            readFormToConfig();
+            try {
+                localStorage.setItem("elif_5_kademe_hikaye_v1", JSON.stringify(config));
+            } catch (e) {}
+            syncUIWithConfig();
+            if (state.running) updateStoryHUD();
+            playSoftSound("catch", 4);
+            closeCustomizeModal();
+        });
+
+        document.getElementById("resetCfgBtn").addEventListener("click", () => {
+            config = { ...DEFAULT_CONFIG, messages: [...DEFAULT_MESSAGES] };
+            try {
+                localStorage.removeItem("elif_5_kademe_hikaye_v1");
+            } catch (e) {}
+            syncUIWithConfig();
+            document.getElementById("shareFeedback").textContent = "Elif için varsayılan ayarlara dönüldü ✨";
+            playSoftSound("catch", 0);
+        });
+
+        // Paylaşılabilir link oluştur ve kopyala
+        document.getElementById("copyShareLinkBtn").addEventListener("click", () => {
+            readFormToConfig();
+            syncUIWithConfig();
+
+            const params = new URLSearchParams();
+            params.set("to", config.partnerName);
+            params.set("term", config.affectionTerm);
+            params.set("from", config.senderName);
+            if (config.letter !== DEFAULT_CONFIG.letter) {
+                params.set("letter", config.letter);
+            }
+            if (config.reward !== DEFAULT_CONFIG.reward) {
+                params.set("coupon", config.reward);
+            }
+
+            const baseUrl = window.location.href.split("?")[0].split("#")[0];
+            const shareUrl = `${baseUrl}?${params.toString()}`;
+
+            const temp = document.createElement("textarea");
+            temp.value = shareUrl;
+            temp.style.position = "fixed";
+            temp.style.opacity = "0";
+            document.body.appendChild(temp);
+            temp.select();
+            let copied = false;
+            try {
+                copied = document.execCommand("copy");
+            } catch (e) {}
+            document.body.removeChild(temp);
+
+            try {
+                window.history.replaceState({}, "", `?${params.toString()}`);
+            } catch (e) {}
+
+            document.getElementById("shareFeedback").textContent =
+                "✅ Elif'e özel link kopyalandı! GitHub Pages linkinle doğrudan gönderebilirsin.";
+            playSoftSound("stageUp");
+        });
+
+        // Başlat & Tekrar Oyna
+        document.getElementById("startBtn").addEventListener("click", startGame);
+        document.getElementById("replayBtn").addEventListener("click", startGame);
+        document.getElementById("confettiMoreBtn").addEventListener("click", () => {
+            playSoftSound("win");
+            burstDomConfetti(55);
+        });
+
+        // Sayfa Yüklenince Başlat
+        window.addEventListener("DOMContentLoaded", () => {
+            initAmbientHearts();
+            loadConfig();
+        });
+    </script>
+</body>
+</html>
